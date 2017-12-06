@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-function soma(a, b){
-    return a + b;
-}
+        function soma(a, b) {
+            return a + b;
+        }
 
-function subtrair (a, b){
-    var resultado = a - b;
-    return resultado;
-}
+        function subtrair(a, b) {
+            var resultado = a - b;
+            return resultado;
+        }
 
-var x = prompt ("Digite o primeiro número");
-var y = prompt ("Digite o segundo número");
+        function multiplicar(a, b) {
+            var resultado = a * b;
+        }
+        function dividir(a, b) {
+            if (b == 0) {
+                return "erro de divisão por zero!"
+            } else {
+                return a / b;
+            }
+        }
 
-document.write( subtrair (x, y) );
+        var x = parseInt(prompt("Digite o primeiro número"));
+        var y = parseInt(prompt("Digite o segundo número"));
+        var o = prompt("Digite a operação: soma, subtração, multiplicação ou divisão");
 
-
-/*
-function multiplicar (a, b){
-    return resultado
-}
-
-var operação = prompt ("Escolha a operação: \nadição: 1 \nsubtração: 2, multiplicação: 3, divisão: 4")
-*/
-
+        if (o == "soma") {
+            document.write(soma(x, y));
+        } else if (o == "subtração") {
+            document.write(subtrair(x, y));
+        } else if (o == "multiplicação") {
+            document.write(multiplicar(x, y));
+        } else if (o == "divisão") {
+            document.write(dividir(x, y));
+        } else {
+            document.write("Operação Inválida")
+        }
     </script>
-
 </body>
+
 </html>
